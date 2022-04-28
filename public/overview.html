@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Usagi Photography</title>
+		<meta name="description" content="Usagi Photography">
+		<meta name="author" content="Ryan Ngoon">
+		<link rel="icon" href="img/minimalBunny.png">
+
+		<link rel="stylesheet" href="style_sheets/intro.css">
+		<link rel="stylesheet" href="style_sheets/base.css">
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="left">
+				<img class="logo" src="img/blacklogo2.png" onclick="location.href='index.html';"></img>
+
+				<!-- Side Navigation Bar -->
+				<ul>
+					<li><a class="active" href="../overview.html">OVERVIEW</a></li>
+					<li><a href="../search/search.html">BROWSE</a></li>
+					<li><a href="../study/study.html">STUDY</a></li>
+					<li><a href="../create/create.html">EDITOR</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="../about/aboutus.html">ABOUT</a></li>
+				</ul>
+
+
+			</div>
+			<div class="right">
+				<div class="gallery">
+					<figure class="gallery__item">
+						<img src="img/hike1.jpg" class="gallery__img" alt="Image 1" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+					    <img src="img/hike2.jpg" class="gallery__img" alt="Image 2" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+					    <img src="img/hike3.jpg" class="gallery__img" alt="Image 3" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+					    <img src="img/hike4.jpg" class="gallery__img" alt="Image 4" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+					    <img src="img/hike5.jpg" class="gallery__img" alt="Image 5" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+					    <img src="img/hike6.jpg" class="gallery__img" alt="Image 6" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+						<img src="img/hike1.jpg" class="gallery__img" alt="Image 1" onclick="modalClick(this)">
+					</figure>
+					 <figure class="gallery__item ">
+					    <img src="img/hike2.jpg" class="gallery__img" alt="Image 2" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+					    <img src="img/hike3.jpg" class="gallery__img" alt="Image 3" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+						<img src="img/hike1.jpg" class="gallery__img" alt="Image 1" onclick="modalClick(this)">
+					</figure>
+					 <figure class="gallery__item ">
+					    <img src="img/hike2.jpg" class="gallery__img" alt="Image 2" onclick="modalClick(this)">
+					</figure>
+					<figure class="gallery__item">
+					    <img src="img/hike3.jpg" class="gallery__img" alt="Image 3" onclick="modalClick(this)">
+					</figure>
+				</div>
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img01">
+				  <div id="caption"></div>
+				</div>
+			</div>
+
+		</div>
+		<script>
+		var modal = document.getElementById("myModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+		  modal.style.display = "none";
+		}
+
+		function modalClick(ii) {
+			var modal = document.getElementById("myModal");
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+		  	modal.style.display = "block";
+		  	modalImg.src = ii.src;
+		  	captionText.innerHTML = ii.alt;
+		}
+		</script>
+	</body>
+</html>
